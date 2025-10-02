@@ -1,15 +1,24 @@
-
-dule for calculating minimum operations
+#!/usr/bin/python3
+"""
+This module contains a function that calculates the
+minimum number of operations needed to obtain exactly
+n H characters in a text file, starting with one H.
+The only operations allowed are "Copy All" and "Paste".
 """
 
 
 def minOperations(n):
     """
-    Calculates the fewest number of operations
-    needed to get exactly n H characters in the file.
-    If n is impossible to achieve, return 0.
+    Calculate the minimum number of operations required.
+
+    Args:
+        n (int): The target number of H characters.
+
+    Returns:
+        int: The fewest number of operations to reach n Hs,
+             or 0 if it is impossible.
     """
-    if n < 2:
+    if n <= 1:
         return 0
 
     operations = 0
@@ -22,4 +31,3 @@ def minOperations(n):
         divisor += 1
 
     return operations
-
